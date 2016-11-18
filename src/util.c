@@ -46,7 +46,7 @@ int stringmatchlen(const char *pattern, int patternLen,
 {
     while(patternLen) {
         switch(pattern[0]) {
-        case '*':
+        case '*'://模式的当前字符为*， 则只需要模式中连续*以后的部分与给定string的某后部分匹配即可
             while (pattern[1] == '*') {
                 pattern++;
                 patternLen--;
